@@ -1,4 +1,4 @@
-namespace group 'com.chavesgu.scan'
+group 'com.chavesgu.scan'
 version '1.0'
 
 buildscript {
@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.android.tools.build:gradle:7.3.0'
     }
 }
 
@@ -24,7 +24,8 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 34
+    namespace 'com.chavesgu.scan'
+    compileSdkVersion 29
 
     defaultConfig {
         minSdkVersion 19
@@ -33,7 +34,7 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
-    namespace 'com.chavesgu.scan'
+    buildToolsVersion '28.0.3'
 }
 
 dependencies {
